@@ -1,6 +1,6 @@
 {
    "features":{
-      "wv_search":true,
+      "webview_search":true,
       "rate_us":true,
       "fix_ssl":false
    },
