@@ -28,7 +28,7 @@
             }
          },
          "search":{
-            "urls":{
+            "url":{
                "category":"https://m.aliexpress.{domain}/category.html?site=glo",
                "query":"https://m.aliexpress.{domain}/wholesale/{query}.html?site=glo&channel=direct"
             },
