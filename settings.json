@@ -18,6 +18,7 @@
           "currency":".*#/currency.*",
           "post":".*currency/list.*",
           "login":"^https://login\\..*",
+          "loginRandom":"^https://login\\..*&random=.*",
           "api":".*/api/currency.*",
           "response":"\"code\":200.*\"success\":true"
         },
