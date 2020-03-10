@@ -15,9 +15,9 @@
     }
     injectCss(cssTS);
     
-    var wvWrapper = {};
-    document.wvWrapper = wvWrapper;
-    wvWrapper.getTitle = function() {
+    var webviewWrapper = {};
+    document.webviewWrapper = webviewWrapper;
+    webviewWrapper.getTitle = function() {
         return document.querySelector('#ms-title span').innerText;
     }
 })();
