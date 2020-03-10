@@ -1,5 +1,5 @@
 (function() {
-    var script = document.getElementByid('mobileJS');
+    var script = document.getElementById('mobileJS');
     if (script == null) {
         return;    
     }
