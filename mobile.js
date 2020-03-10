@@ -1,5 +1,6 @@
 (function() {
     var wvWrapper = {};
+    document.wvWrapper = wvWrapper;
     wvWrapper.script = document.getElementById('mobileJS');
     if (wvWrapper.script == null) {
         return;    
