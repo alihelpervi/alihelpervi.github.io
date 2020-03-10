@@ -37,7 +37,7 @@
                "productClicked":".*/item/.*"
             },
             "ignore":{
-               "navigate":[
+               "navigations":[
                   ".*/shopcart/list.html.*",
                   ".*/login.html.*",
                   ".*/account.html.*",
