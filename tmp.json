@@ -1,5 +1,5 @@
 {
-  "webviews": {
+"webviews": {
                 "currency": {
                     "url": {
                         "setCookie": "https://login.aliexpress.{domain}/setCommonCookie.htm?fromApp=false&amp;currency={currency}&amp;region=UA&amp;bLocale=ru_RU&amp;site=rus&amp;province=&amp;city=",
@@ -32,8 +32,15 @@
                         "navigate": [".*/shopcart/list.html.*", ".*/login.html.*", ".*/account.html.*", ".*category-amp.footer.d_home.*", "^https://m.aliexpress.{domain}/$"]
                     }
                 },
-                "general": {
+                "settings": {
                     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
                 }
+            },
+            "features": {
+                "wv_search": true,
+                "rate_us": true
+            },
+            "settings": {
+                "fix_ssl": false
             }
 }
