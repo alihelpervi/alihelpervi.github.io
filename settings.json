@@ -15,7 +15,7 @@
         },
         "check":{
           "setCookie":".*setCommonCookie\\.htm.*",
-          "api":".*/api/currency/list.*",
+          "api":".*/api/currency/list.*1",
           "response":".*\"code\":200.*\"success\":true.*"
         },
         "ignore":{
