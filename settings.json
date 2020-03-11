@@ -34,7 +34,7 @@
           "productClicked":".*/item/.*",
           "categoryAll":".*category.html.*",
           "subCategory":".*category-amp.subcat.*",
-          "items":".*\?categoryName=.*|.*/wholesale/.*"
+          "items":".*categoryName=.*|.*/wholesale/.*"
         },
         "ignore":{
           "navigations":[
