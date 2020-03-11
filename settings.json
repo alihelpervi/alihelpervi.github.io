@@ -14,7 +14,7 @@
           "referrer":"https://m.aliexpress.{domain}/account.html"
         },
         "check":{
-          "setCookie":".*setCommonCookie.htm.*",
+          "setCookie":".*setCommonCookie\\.htm.*",
           "api":".*/api/currency/list.*",
           "response":".*\"code\":200.*\"success\":true.*"
         },
