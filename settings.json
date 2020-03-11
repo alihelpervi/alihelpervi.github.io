@@ -15,7 +15,6 @@
         },
         "check":{
           "setCookie":".*setCommonCookie.htm.*",
-          "login":"^https://login\\..*",
           "api":".*/api/currency/list.*",
           "response":".*\"code\":200.*\"success\":true.*"
         },
@@ -32,6 +31,7 @@
         },
         "check":{
           "categoryTMP":".*/category/.*",
+          "login":"^https://login\\..*",
           "productClicked":".*/item/.*",
           "categoryAll":".*category.html.*",
           "subCategory":".*category-amp.subcat.*",
