@@ -16,7 +16,7 @@
         "check":{
           "setCookie":".*setCommonCookie.htm.*",
           "currency":".*#/currency.*",
-          "post":".*currency/list.*",
+          "currencyList":".*currency/list.*",
           "login":"^https://login\\..*",
           "loginRandom":"^https://login\\..*&random=.*",
           "api":".*/api/currency.*",
