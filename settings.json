@@ -27,7 +27,8 @@
       "search":{
         "url":{
           "category":"https://m.aliexpress.{domain}/category.html?site=glo",
-          "query":"https://m.aliexpress.{domain}/wholesale/{query}.html?site=glo&channel=direct"
+          "query":"https://m.aliexpress.{domain}/wholesale/{query}.html?site=glo&channel=direct",
+          "js": "https://alihelpervi.github.io/mobile.js"
         },
         "check":{
           "login":"^https://login\\..*",
