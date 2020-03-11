@@ -24,7 +24,7 @@
         },
         "ignore":{
           "errors":[
-            ".*currency/list.*"
+            ".*check.gif\?.*"
           ]
         }
       },
