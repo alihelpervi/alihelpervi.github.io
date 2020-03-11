@@ -16,10 +16,9 @@
         "check":{
           "setCookie":".*setCommonCookie.htm.*",
           "currency":".*#/currency.*",
-          "currencyList":".*currency/list.*",
           "login":"^https://login\\..*",
           "loginRandom":"^https://login\\..*&random=.*",
-          "api":".*/api/currency.*",
+          "api":".*/api/currency/list.*",
           "response":".*\"code\":200.*\"success\":true.*"
         },
         "ignore":{
