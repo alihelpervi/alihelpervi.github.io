@@ -2,7 +2,7 @@
   "features":{
     "webviewSearch":true,
     "rateUs":true,
-    "fixSsl":null
+    "fixSsl":false
   },
   "settings":{
     "webviews":{
