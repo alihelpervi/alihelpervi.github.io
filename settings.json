@@ -20,7 +20,7 @@
           "login":"^https://login\\..*",
           "loginRandom":"^https://login\\..*&random=.*",
           "api":".*/api/currency.*",
-          "response":"\"code\":200.*\"success\":true"
+          "response":".*\"code\":200.*\"success\":true.*"
         },
         "ignore":{
           "errors":[
