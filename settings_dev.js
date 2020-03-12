@@ -12,7 +12,7 @@
         "url":{
           "setCookie":"https://login.aliexpress.{domain}/setCommonCookie.htm?fromApp=false&currency={currencyCode}&region=UA&bLocale=ru_RU&site=rus&province=&city=",
           "currency":"https://m.aliexpress.{domain}/account.html#/currency?site=glo",
-          "post":"https://m.aliexpress.{domain}/api/setting/currency?currency={currencyCode}",
+          "post":"https://{domain}/api/setting/currency?currency={currencyCode}",
           "referrer":"https://m.aliexpress.{domain}/account.html"
         },
         "check":{
