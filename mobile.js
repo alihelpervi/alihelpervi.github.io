@@ -17,7 +17,7 @@
     
     var webviewWrapper = {};
     document.webviewWrapper = webviewWrapper;
-    webviewWrapper.getTitle = function() {
+    webviewWrapper.getCategoryName = function() {
         return document.querySelector('#ms-title span').innerText;
     }
 })();
