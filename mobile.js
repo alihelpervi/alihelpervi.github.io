@@ -20,4 +20,11 @@
     webviewWrapper.getCategoryName = function() {
         return document.querySelector('#ms-title span').innerText;
     }
+    webviewWrapper.performSearch = function(query) {
+        AMP.setState({
+                        searchState: {
+                            inputValue: query
+                        }
+                    })
+    }
 })();
