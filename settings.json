@@ -2,6 +2,7 @@
   "version": 1,
   "features":{
     "webviewSearch":true,
+    "userX":true,
     "rateUs":true,
     "fixSsl":false
   },
