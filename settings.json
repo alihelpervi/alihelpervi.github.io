@@ -1,46 +1,53 @@
 {
   "version": 1,
-  "features":{
-    "webviewSearch":true,
-    "userX":true,
-    "rateUs":true,
-    "fixSsl":false
+  "features": {
+    "webviewSearch": true,
+    "userX": true,
+    "rateUs": true,
+    "fixSsl": false
   },
-  "settings":{
-    "webviews":{
-      "currency":{
-        "url":{
-          "setCookie":"https://login.aliexpress.{domain}/setCommonCookie.htm?fromApp=false&currency={currencyCode}&region=UA&bLocale=ru_RU&site=rus&province=&city=",
-          "currency":"https://m.aliexpress.{domain}/account.html#/currency?site=glo",
-          "post":"https://m.aliexpress.{domain}/api/setting/currency?currency={currencyCode}",
-          "referrer":"https://m.aliexpress.{domain}/account.html"
+  "settings": {
+    "webviews": {
+      "account": {
+        "url": {
+          "setCookie": "https://login.aliexpress.{domain}/setCommonCookie.htm?fromApp=false&currency={currencyCode}&region=UA&bLocale=ru_RU&site=rus&province=&city=",
+          "currency": {
+            "load": "https://m.aliexpress.{domain}/account.html#/currency?site=glo",
+            "post": "https://m.aliexpress.{domain}/api/setting/currency?currency={currencyCode}"
+          },
+          "country": {
+            "load": "https://m.aliexpress.{domain}/api/setting/address?country={countryCode}&changeSite=true",
+            "post": "https://m.aliexpress.{domain}/api/setting/currency?currency={currencyCode}"
+          },
+          "referrer": "https://m.aliexpress.{domain}/account.html"
         },
-        "check":{
-          "setCookie":".*setCommonCookie\\.htm.*",
-          "api":".*/api/currency/list.*",
-          "response":".*\"code\":200.*\"success\":true.*"
+        "check": {
+          "setCookie": ".*setCommonCookie\\.htm.*",
+          "currency": ".*/api/currency/list.*",
+          "country": ".*/api/logistics/hots.*",
+          "response": ".*\"code\":200.*\"success\":true.*"
         },
-        "ignore":{
-          "errors":[
+        "ignore": {
+          "errors": [
             ".*check.gif\\?.*"
           ]
         }
       },
-      "search":{
-        "url":{
-          "category":"https://m.aliexpress.{domain}/category.html?site=glo",
-          "query":"https://m.aliexpress.{domain}/wholesale/{query}.html?site=glo&channel=direct",
+      "search": {
+        "url": {
+          "category": "https://m.aliexpress.{domain}/category.html?site=glo",
+          "query": "https://m.aliexpress.{domain}/wholesale/{query}.html?site=glo&channel=direct",
           "js": "https://alihelpervi.github.io/mobile.js"
         },
-        "check":{
-          "login":"^https://login\\..*",
-          "productClicked":".*/item/.*",
-          "categoryAll":".*category\\.html.*",
-          "subCategory":".*category-amp\\.subcat.*",
-          "items":".*categoryName=.*|.*/wholesale/.*"
+        "check": {
+          "login": "^https://login\\..*",
+          "productClicked": ".*/item/.*",
+          "categoryAll": ".*category\\.html.*",
+          "subCategory": ".*category-amp\\.subcat.*",
+          "items": ".*categoryName=.*|.*/wholesale/.*"
         },
-        "ignore":{
-          "navigations":[
+        "ignore": {
+          "navigations": [
             ".*/shopcart/list\\.html.*",
             ".*/login\\.html.*",
             ".*/account\\.html.*",
@@ -49,8 +56,8 @@
           ]
         }
       },
-      "general":{
-        "userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+      "general": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
       }
     }
   }
