@@ -16,8 +16,8 @@
             "post": "https://m.aliexpress.{domain}/api/setting/currency?currency={currencyCode}"
           },
           "country": {
-            "load": "https://m.aliexpress.{domain}/api/setting/address?country={countryCode}&changeSite=true",
-            "post": "https://m.aliexpress.{domain}/api/setting/currency?currency={currencyCode}"
+            "load": "https://m.aliexpress.{domain}/account.html#/shipto?site=glo",
+            "post": "https://m.aliexpress.{domain}/api/setting/address?country={countryCode}&changeSite=true"
           },
           "referrer": "https://m.aliexpress.{domain}/account.html"
         },
