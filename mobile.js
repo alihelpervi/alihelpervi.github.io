@@ -27,7 +27,7 @@
                         }
                     })
     }
-    webviewWrapper.getCategoryName = function() {
+    webviewWrapper.focusSearch = function() {
         var element = document.getElementById('ms-search');
         if (element == null) return false;
         element.click();
