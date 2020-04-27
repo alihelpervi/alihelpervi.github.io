@@ -27,4 +27,10 @@
                         }
                     })
     }
+    webviewWrapper.getCategoryName = function() {
+        var element = document.getElementById('ms-search');
+        if (element == null) return false;
+        element.click();
+        return true;
+    }
 })();
