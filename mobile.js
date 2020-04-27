@@ -18,9 +18,12 @@
     var webviewWrapper = {};
     document.webviewWrapper = webviewWrapper;
     webviewWrapper.getCategoryName = function() {
-        return document.querySelector('#ms-title span').innerText;
+        var element = document.querySelector('#ms-title span');
+        if (element == null) return false;
+        return element.innerText;
     }
     webviewWrapper.performSearch = function(query) {
+        if (AMP == null) return false;
         AMP.setState({
                         searchState: {
                             inputValue: query
