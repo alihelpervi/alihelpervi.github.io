@@ -28,7 +28,8 @@
                         searchState: {
                             inputValue: query
                         }
-                    })
+                    });
+        return true;
     }
     webviewWrapper.focusSearch = function() {
         var element = document.getElementById('ms-search');
