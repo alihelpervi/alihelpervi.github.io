@@ -27,6 +27,28 @@
           "country": ".*/api/logistics/hots.*",
           "response": ".*\"code\":200.*\"success\":true.*"
         },
+        "headers": {
+          "country": {
+            "keys": [
+              "Referer",
+              "accept",
+              "amp-same-origin"
+            ],
+            "values": [
+              "https://m.aliexpress.{domain}/account.html#/shipto?site=glo",
+              "application/json",
+              "true"
+            ]
+          },
+          "currency": {
+            "keys": [
+              "Referer"
+            ],
+            "values": [
+              "https://m.aliexpress.{domain}/account.html"
+            ]
+          }
+        },
         "ignore": {
           "errors": [
             ".*check.gif\\?.*"
