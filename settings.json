@@ -12,14 +12,14 @@
         "url": {
           "setCookie": "https://login.aliexpress.{domain}/setCommonCookie.htm?fromApp=false&currency={currencyCode}&region={countryCode}&bLocale=ru_RU&site=rus&province=&city=",
           "currency": {
-            "load": "https://m.aliexpress.{domain}/account.html#/currency?site=glo",
-            "post": "https://m.aliexpress.{domain}/api/setting/currency?currency={currencyCode}"
+            "load": "https://{subdomain}aliexpress.{domain}/account.html#/currency?site=glo",
+            "post": "https://{subdomain}aliexpress.{domain}/api/setting/currency?currency={currencyCode}"
           },
           "country": {
-            "load": "https://m.aliexpress.{domain}/account.html#/shipto?site=glo",
-            "post": "https://m.aliexpress.{domain}/api/countries/shipto?country={countryCode}&__amp_source_origin=https%3A%2F%2Fm.aliexpress.ru"
+            "load": "https://{subdomain}aliexpress.{domain}/account.html#/shipto?site=glo",
+            "post": "https://{subdomain}aliexpress.{domain}/api/countries/shipto?country={countryCode}&__amp_source_origin=https%3A%2F%2Fm.aliexpress.ru"
           },
-          "referrer": "https://m.aliexpress.{domain}/account.html"
+          "referrer": "https://{subdomain}aliexpress.{domain}/account.html"
         },
         "check": {
           "setCookie": ".*setCommonCookie\\.htm.*",
@@ -35,8 +35,8 @@
       },
       "search": {
         "url": {
-          "category": "https://m.aliexpress.{domain}/category.html?site=glo",
-          "query": "https://m.aliexpress.{domain}/wholesale/{query}.html?site=glo&channel=direct",
+          "category": "https://{subdomain}aliexpress.{domain}/category.html?site=glo",
+          "query": "https://{subdomain}aliexpress.{domain}/wholesale/{query}.html?site=glo&channel=direct",
           "js": "https://alihelpervi.github.io/mobile.js"
         },
         "check": {
@@ -52,7 +52,7 @@
             ".*/login\\.html.*",
             ".*/account\\.html.*",
             ".*category-amp\\.footer\\.d_account.*",
-            "^https://m\\.aliexpress\\.{domain}/$"
+            "^https://{subdomain}aliexpress\\.{domain}/$"
           ]
         }
       },
