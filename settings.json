@@ -1,0 +1,40 @@
+{
+	"version": 1,
+	"libraries": {
+		"userX": true,
+		"yandex": true,
+		"sentry": true,
+		"appsflyer": true,
+		"amplitude": true
+	},
+	"features": {
+		"rateUs": true,
+		"checkAliTems": true,
+		"fixSsl": false
+	},
+	"cookie": {
+		"service": {
+			"main": "http://alitems.com/",
+			"additional": "http://ad.admitad.com/"
+		},
+		"aliexpress": {
+			"main": "http://m.aliexpress.com/",
+			"redirect": "^(http|https)://s\\.click\\.aliexpress\\.com/.*",
+			"app_scheme": "aliexpress://goto?url="
+		}
+	},
+	"sharing": {
+		"aliexpress": ".aliexpress\\.(com|ru).",
+		"max_check_links_count": 3,
+		"parse_link": {
+			"template": "(.|^)((https|http)://[^ \n])([ ]*|\b|$)",
+			"count": 5,
+			"index": 2
+		},
+		"get_id": {
+			"template": "todo",
+			"count": 0,
+			"index": 0
+		}
+	}
+}
