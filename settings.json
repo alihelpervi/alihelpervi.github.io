@@ -24,17 +24,6 @@
 		}
 	},
 	"sharing": {
-		"aliexpress": ".aliexpress\\.(com|ru).",
-		"max_check_links_count": 3,
-		"parse_link": {
-			"template": "(.|^)((https|http)://[^ \n])([ ]*|\b|$)",
-			"count": 5,
-			"index": 2
-		},
-		"get_id": {
-			"template": "todo",
-			"count": 0,
-			"index": 0
-		}
+		"aliexpress": ".aliexpress\\.(com|ru)."
 	}
 }
