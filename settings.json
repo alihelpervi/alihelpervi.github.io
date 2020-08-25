@@ -22,7 +22,7 @@
       "redirect": "^(http|https)://s\\.click\\.aliexpress\\.com/.*",
       "app_scheme": "aliexpress://goto?url="
     },
-    "use_partner_url": true
+    "use_partner_url": false
   },
   "sharing": {
     "aliexpress": ".aliexpress\\.(com|ru)."
