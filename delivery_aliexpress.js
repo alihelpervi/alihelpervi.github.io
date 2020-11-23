@@ -4,17 +4,6 @@
         return;    
     }
     
-    var cssTS = script.dataset.ts;
-    function injectCss(ts)  {
-        var parent = document.getElementsByTagName('head').item(0);
-        var link = document.createElement('link');
-        link.type = 'text/css';
-        link.rel = 'stylesheet';
-        link.href = 'delivery.css?' + ts;
-        parent.appendChild(link);
-    }
-    injectCss(cssTS);
-    
     var webviewWrapper = {};
     document.webviewWrapper = webviewWrapper;
     webviewWrapper.test = function() {
