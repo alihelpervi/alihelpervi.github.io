@@ -10,7 +10,7 @@
         var link = document.createElement('link');
         link.type = 'text/css';
         link.rel = 'stylesheet';
-        link.href = 'https://alihelpervi.github.io/delivery.css?' + ts;
+        link.href = 'delivery.css?' + ts;
         parent.appendChild(link);
     }
     injectCss(cssTS);
