@@ -9,7 +9,7 @@
     webviewWrapper.test = function() {
         return true;
     }
-   webviewWrapper.hideSocial = function() {
+   webviewWrapper.processLoginPage = function() {
         var socialDiv = document.querySelector('.fm-sns')
         if (socialDiv == null) return false;
         socialDiv.style.display = 'none';
