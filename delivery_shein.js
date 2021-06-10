@@ -10,15 +10,16 @@
         return true;
     }
    webviewWrapper.processLoginPage = function() {
-        var socialDiv = document.querySelector('.fm-sns')
+        /*var socialDiv = document.querySelector('.fm-sns')
         if (socialDiv == null) return false;
-        socialDiv.style.display = 'none';
+        socialDiv.style.display = 'none';*/
         return true;
     }
     webviewWrapper.getOrders = function() {
-        var e=document.querySelector(".order-list");if(null==e)return null;var t=document.querySelector("div[placeholder]");if(null==t)return null;if(!t.classList.contains("amp-hidden"))return"loading";if(null!=e.getElementsByClassName("ms-ept-page")[0])return"empty";for(var r=[],l=[],a=e.getElementsByClassName("order-item"),n=0;n<a.length;n++){var i=a[n],s=i.getElementsByClassName("order-item-id")[0];if(null!=s){var m=s.textContent,u=m.split(":");if(2==u.length){var o=u[1].trim(),d=i.getElementsByClassName("order-action")[0];if(null!=d){var g=d.getElementsByTagName("a")[0];if(null!=g){var f=g.getAttribute("href");if(f.includes("logistics")){var c=i.getElementsByTagName("img")[0];if(null!=c||null!=(c=i.getElementsByTagName("amp-img")[0])){var v=c.getAttribute("src"),p=i.getElementsByClassName("order-product-title")[0];if(null!=p){var y={orderId:o,trackUrl:f,imageUrl:v,title:p.textContent};r.push(y)}}}}}}else l.push("fail to parse orderId: "+m)}else l.push("fail to find order-item-id")}var N={data:r,errors:l};return JSON.stringify(N);
+        var e=document.querySelector(".list-body");if(null==e)return null;var r=document.querySelector(".order-list-loading");if(null==r)return null;if("block"==r.style.display)return"loading";if(null!=document.querySelector("icon-empty-history"))return"empty";for(var t=[],l=[],i=e.getElementsByClassName("list-item-row"),s=0;s<i.length;s++){var a=i[s],n=a.querySelector(".c-icon-tip-spec>a");if(null!=n){var o=n.getAttribute("da-label"),u=o.split("-");if(2==u.length){var c=u[0].trim(),p="https://www.shein.com/user/orders/track/"+c,d=a.querySelector(".swiper-slide-active>img"),f="";null==d?l.push("fail to parse swiper-slide-active>img"):f="https:"+d.getAttribute("src");var m={orderId:c,trackUrl:p,imageUrl:f,title:""};t.push(m)}else l.push("fail to parse da-label: "+o)}else l.push("fail to find c-icon-tip-spec>a")}var y={data:t,errors:l};JSON.stringify(y);
     }
     webviewWrapper.checkInvalidLogin = function() {
-        return document.querySelector('.fm-error-message') != null
+//        return document.querySelector('.fm-error-message') != null
+        return false;
     }
 })();
