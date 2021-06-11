@@ -10,9 +10,9 @@
         return true;
     }
    webviewWrapper.processLoginPage = function() {
-        /*var socialDiv = document.querySelector('.fm-sns')
+        var socialDiv = document.querySelector('.c-login-footer')
         if (socialDiv == null) return false;
-        socialDiv.style.display = 'none';*/
+        socialDiv.style.display = 'none';
         return true;
     }
     webviewWrapper.getOrders = function() {
