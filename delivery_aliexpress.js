@@ -12,7 +12,7 @@
    webviewWrapper.processLoginPage = function() {
         var socialDiv = document.querySelector('.fm-sns')
         if (socialDiv == null) return false;
-        socialDiv.style.display = 'none';
+        //socialDiv.style.display = 'none';
         return true;
     }
       webviewWrapper.getOrders = function() {
