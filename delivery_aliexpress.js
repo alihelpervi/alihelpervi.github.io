@@ -14,8 +14,8 @@
         if (socialDiv == null) return false;
        
        var elements = ['.fm-sns-item.vk', '.fm-sns-item.twitter', '.fm-sns-item.apple', '.fm-sns-item.ok', '.fm-sns-item.instagram', '.fm-sns-trigger'];
-       socialButtons.forEach(function(element) {
-            var elementDiv = document.querySelector(element)
+       elements.forEach(function(element) {
+            var elementDiv = socialDiv.querySelector(element)
             if (elementDiv != null) {
                 elementDiv.style.display = 'none';
             }
