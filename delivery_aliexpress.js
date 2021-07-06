@@ -18,16 +18,9 @@
             return true;
        }
 
-       var allElements = ['.fm-sns-item.facebook', '.fm-sns-item.google', '.fm-sns-item.vk', '.fm-sns-item.twitter', '.fm-sns-item.apple', '.fm-sns-item.ok', '.fm-sns-item.instagram', '.fm-sns-trigger'];
-       var elementsToHide = [];
-
-       allElements.forEach(function(element) {
-           if (!showButtons.includes(element)) {
-               elementsToHide.push(element)
-           }
-       })
+       var allElements = [/*'.fm-sns-item.facebook', '.fm-sns-item.google', */'.fm-sns-item.vk', '.fm-sns-item.twitter', '.fm-sns-item.apple', '.fm-sns-item.ok', '.fm-sns-item.instagram', '.fm-sns-trigger'];
              
-       elementsToHide.forEach(function(element) {
+       allElements.forEach(function(element) {
             var elementDiv = socialDiv.querySelector(element)
             if (elementDiv != null) {
                 elementDiv.style.display = 'none';
