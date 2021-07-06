@@ -13,8 +13,8 @@
         var socialDiv = document.querySelector('.fm-sns');
         if (socialDiv == null) return false;
 
-       var disableSocialLogin = false;
-       if (typeof showButtons === 'undefined' || disableSocialLogin) {
+       var isSocialLoginEnabled = true;
+       if (typeof showButtons === 'undefined' || !isSocialLoginEnabled) {
             socialDiv.style.display = 'none';
             return true;
        }
