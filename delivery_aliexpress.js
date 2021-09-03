@@ -1,12 +1,16 @@
 (function() {
+    console.log('11111');
     var script = document.getElementById('mobileJS');
     if (script == null) {
+            console.log('22222');
         return;    
     }
     
+        console.log('33333');
     var webviewWrapper = {};
     document.webviewWrapper = webviewWrapper;
     webviewWrapper.test = function() {
+            console.log('444444');
         return true;
     }
    webviewWrapper.processLoginPage = function(showButtons) {
