@@ -10,7 +10,7 @@
         return true;
     }
    webviewWrapper.processLoginPage = function(showButtons) {
-        var socialDiv = document.querySelector('.fm-sns');
+        var socialDiv = document.querySelector('.fm-sns-old');
         if (socialDiv == null) return false;
 
        var isSocialLoginEnabled = true;
@@ -19,8 +19,8 @@
             return true;
        }
 
-       var allElements = ['.fm-sns-item.facebook'/*, '.fm-sns-item.google'*/, '.fm-sns-item.vk', '.fm-sns-item.twitter', '.fm-sns-item.apple', '.fm-sns-item.ok', '.fm-sns-item.instagram', '.fm-sns-trigger'];
-             
+       var allElements = ['.fm-sns-old-item.facebook'/*, '.fm-sns-old-item.google'*/, '.fm-sns-old-item.vk', '.fm-sns-old-item.twitter', '.fm-sns-old-item.apple', '.fm-sns-old-item.ok', '.fm-sns-old-item.instagram', '.fm-sns-old-item'];
+
        allElements.forEach(function(element) {
             var elementDiv = socialDiv.querySelector(element);
             if (elementDiv != null) {
