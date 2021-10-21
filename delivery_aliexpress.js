@@ -19,7 +19,7 @@
             return true;
        }
 
-       var allElements = ['.fm-sns-old-item.facebook'/*, '.fm-sns-old-item.google'*/, '.fm-sns-old-item.vk', '.fm-sns-old-item.twitter', '.fm-sns-old-item.apple', '.fm-sns-old-item.ok', '.fm-sns-old-item.instagram', '.fm-sns-old-item', '.fm-sns-old-trigger'];
+       var allElements = ['.fm-sns-old-item.facebook'/*, '.fm-sns-old-item.google'*/, '.fm-sns-old-item.vk', '.fm-sns-old-item.twitter', '.fm-sns-old-item.apple', '.fm-sns-old-item.ok', '.fm-sns-old-item.instagram', '.fm-sns-old-trigger'];
 
        allElements.forEach(function(element) {
             var elementDiv = socialDiv.querySelector(element);
