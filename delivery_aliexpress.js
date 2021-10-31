@@ -37,6 +37,7 @@
         return document.querySelector('.fm-error-message') != null;
     }
     webviewWrapper.getProductContent = function() {
+        return "4324324324234234234324324423"
         var priceDiv = document.getElementsByClassName("root")[0]
         if (priceDiv == null || priceDiv.innerHTML == '') {
             return null
