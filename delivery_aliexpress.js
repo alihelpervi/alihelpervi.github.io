@@ -37,7 +37,7 @@
         return document.querySelector('.fm-error-message') != null;
     }
     webviewWrapper.getProductContent = function() {
-        var priceDiv = document.getElementsByClassName("product-price-value")[0]
+        var priceDiv = document.getElementsByClassName("root")[0]
         if (priceDiv == null || priceDiv.innerHTML == '') {
             return null
         }
