@@ -37,16 +37,12 @@
         return document.querySelector('.fm-error-message') != null;
     }
     webviewWrapper.getProductContent = function() {
-        var content = document.getElementsByTagName('html')[0].innerHTML;
         var priceDiv = document.getElementsByClassName("product-price-value")[0]
-        if (priceDiv == null) {
+        if (priceDiv == null || priceDiv.innerHTML == '') {
             return null
         }
-        if (priceDiv.innerHTML == '') {
-            return null
-        }
-
-        return content
+       
+        return document.getElementsByTagName('html')[0].innerHTML;
     }
     
 })();
