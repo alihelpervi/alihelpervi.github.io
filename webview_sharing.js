@@ -8,12 +8,20 @@
     document.webviewWrapper = webviewWrapper;
 
     webviewWrapper.getProductContent = function() {
-        var sellerDiv = document.getElementsByClassName('container--container--3TXibjJ')[0]
-        if (sellerDiv == null) {
+        var hasContent = false
+        try {
+            hasContent  = document.querySelectorAll("[exp_page='detail_page']").length > 2    
+        } catch(e) {
           window.scroll(0, 500)
-          return null
+          return null   
         }
-        return document.getElementsByTagName('html')[0].innerHTML;    
+        
+        if (hasContent) {
+            return document.getElementsByTagName('html')[0].innerHTML;        
+        } else {
+          window.scroll(0, 500)
+          return null     
+        }
     }
 
     webviewWrapper.applyCountrySettings = function(countryCode) {  
