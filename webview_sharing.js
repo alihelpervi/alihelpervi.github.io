@@ -10,7 +10,7 @@
     webviewWrapper.getProductContent = function() {
         var hasContent = false
         try {
-            hasContent  = document.querySelectorAll("[exp_page='detail_page']").length > 2    
+            hasContent = document.getElementById('root').clientHeight > 500
         } catch(e) {
           window.scroll(0, 500)
           return null   
