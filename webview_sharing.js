@@ -16,13 +16,13 @@
         return document.getElementsByTagName('html')[0].innerHTML;    
     }
 
-    webviewWrapper.applyCountrySettings = function() {  
-      document.getElementsByClassName("$countryCode")[0].click()
+    webviewWrapper.applyCountrySettings = function(countryCode) {  
+      document.getElementsByClassName(countryCode)[0].click()
       return true
     }
 
-    webviewWrapper.applyCurrencySettings = function() {  
-      document.getElementsByClassName('$currencyCode')[0].click()
+    webviewWrapper.applyCurrencySettings = function(currencyCode) {  
+      document.getElementsByClassName(currencyCode)[0].click()
       return true
     }
 
