@@ -17,12 +17,12 @@
     }
 
     webviewWrapper.applyCountrySettings = function(countryCode) {  
-      document.getElementsByClassName('"' + countryCode + '"')[0].click()
+      document.getElementsByClassName(countryCode)[0].click()
       return true
     }
 
     webviewWrapper.applyCurrencySettings = function(currencyCode) {  
-      document.getElementsByClassName('"' + currencyCode + '"')[0].click()
+      document.getElementsByClassName(currencyCode)[0].click()
       return true
     }
 
@@ -42,7 +42,7 @@
         }
         var section = document.getElementById('account-section')
         var lis = section.getElementsByTagName('li')
-        var li = lis[map['"' + languageCode + '"']]
+        var li = lis[map[languageCode]]
         li.click()
         return true
     }
