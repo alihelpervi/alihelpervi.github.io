@@ -10,17 +10,17 @@
     webviewWrapper.getProductContent = function() {
         var hasContent = false
         try {
-            hasContent = document.getElementById('root').clientHeight > 500
+            hasContent = document.getElementById('root').clientHeight > 2000
         } catch(e) {
-          window.scroll(0, 500)
-          return null   
+            window.scroll(0, 2000)
+            return null
         }
-        
+
         if (hasContent) {
-            return document.getElementsByTagName('html')[0].innerHTML;        
+            return document.getElementsByTagName('html')[0].innerHTML;
         } else {
-          window.scroll(0, 500)
-          return null     
+            window.scroll(0, 2000)
+            return null
         }
     }
 
