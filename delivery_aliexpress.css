@@ -1,4 +1,4 @@
-.batman-forget, .fm-tabs-tab:first-child, .comet-tabs-nav-item:first-child, .back, .fm-sns-item.facebook, .fm-sns-item.vk, .fm-sns-item.twitter, .fm-sns-item.apple, .fm-sns-item.ok, .fm-sns-item.instagram, .fm-sns-trigger {
+.batman-forget, .fm-tabs-tab:first-child, .comet-tabs-nav-item:first-child, .back, .fm-sns-item.facebook, .fm-sns-item.vk, .fm-sns-item.twitter, .fm-sns-item.apple, .fm-sns-item.ok, .fm-sns-item.instagram, .fm-sns-trigger, .vk, .facebook, .twitter, .apple, .ok, .instagram {
     display: none !important; 
 }
 .login-container {
