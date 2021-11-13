@@ -1,3 +1,6 @@
 .batman-forget, .comet-tabs-nav-item:first-child, .back, .fm-sns-item.facebook, .fm-sns-item.vk, .fm-sns-item.twitter, .fm-sns-item.apple, .fm-sns-item.ok, .fm-sns-item.instagram, .fm-sns-trigger {
     display: none !important; 
 }
+.login-container {
+ width: 100% !important;   
+}
