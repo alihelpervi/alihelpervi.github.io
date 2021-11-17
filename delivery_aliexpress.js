@@ -36,6 +36,13 @@
     webviewWrapper.checkInvalidLogin = function() {
         return document.querySelector('.fm-error-message') != null;
     }
+    webviewWrapper.checkIsOrderPage = function() {
+        var div = document.querySelector(".order-list");
+        if (div == null) {
+            return false;
+        }
+        return true;
+    }
     webviewWrapper.getProductContent = function() {
         var priceDiv = document.getElementById('root')
         if (priceDiv == null || priceDiv.innerHTML == '') {
@@ -44,7 +51,4 @@
        
         return document.getElementsByTagName('html')[0].innerHTML;
     }
-    
-   
-    
 })();
