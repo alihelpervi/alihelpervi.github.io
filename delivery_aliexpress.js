@@ -1,79 +1,40 @@
 (function() {
     var script = document.getElementById('mobileJS');
     if (script == null) {
-        return;    
+        return;
     }
-    
+
     var webviewWrapper = {};
     document.webviewWrapper = webviewWrapper;
     webviewWrapper.test = function() {
         return true;
     }
-   webviewWrapper.processLoginPage = function(showButtons) {
+    webviewWrapper.processLoginPage = function(showButtons) {
         var socialDiv = document.querySelector('.fm-login');
         if (socialDiv == null) return false;
 
-       var isSocialLoginEnabled = true;
-       if (typeof showButtons === 'undefined' || !isSocialLoginEnabled) {
+        var isSocialLoginEnabled = true;
+        if (typeof showButtons === 'undefined' || !isSocialLoginEnabled) {
             socialDiv.style.display = 'none';
             return true;
-       }
+        }
 
-       var allElements = ['.facebook', '.fm-sns-item.facebook'/*, '.fm-sns-item.google'*/, '.vk', '.fm-sns-item.vk', '.twitter', '.fm-sns-item.twitter', '.apple', '.fm-sns-item.apple', '.ok', '.fm-sns-item.ok', '.instagram', '.fm-sns-item.instagram', '.fm-sns-trigger', '.show-all', '.fm-forget'];
+        var allElements = ['.facebook', '.fm-sns-item.facebook'/*, '.fm-sns-item.google'*/, '.vk', '.fm-sns-item.vk', '.twitter', '.fm-sns-item.twitter', '.apple', '.fm-sns-item.apple', '.ok', '.fm-sns-item.ok', '.instagram', '.fm-sns-item.instagram', '.fm-sns-trigger', '.show-all', '.fm-forget'];
 
-       allElements.forEach(function(element) {
+        allElements.forEach(function(element) {
             var elementDiv = socialDiv.querySelector(element);
             if (elementDiv != null) {
                 elementDiv.style.display = 'none';
             }
-       });
-       
+        });
+
         return true;
     }
     webviewWrapper.loadMore = function() {
-       var button = document.getElementById('order-list-button');
-       if (button == null) return false;
-       button.click();
-       return true;
-    }
-    webviewWrapper.getOrders = function() {
-(function() {
-    var script = document.getElementById('mobileJS');
-    if (script == null) {
-        return;    
-    }
-    
-    var webviewWrapper = {};
-    document.webviewWrapper = webviewWrapper;
-    webviewWrapper.test = function() {
+        var button = document.getElementById('order-list-button');
+        if (button == null) return false;
+        button.click();
         return true;
-    }
-   webviewWrapper.processLoginPage = function(showButtons) {
-        var socialDiv = document.querySelector('.fm-login');
-        if (socialDiv == null) return false;
-
-       var isSocialLoginEnabled = true;
-       if (typeof showButtons === 'undefined' || !isSocialLoginEnabled) {
-            socialDiv.style.display = 'none';
-            return true;
-       }
-
-       var allElements = ['.facebook', '.fm-sns-item.facebook'/*, '.fm-sns-item.google'*/, '.vk', '.fm-sns-item.vk', '.twitter', '.fm-sns-item.twitter', '.apple', '.fm-sns-item.apple', '.ok', '.fm-sns-item.ok', '.instagram', '.fm-sns-item.instagram', '.fm-sns-trigger', '.show-all', '.fm-forget'];
-
-       allElements.forEach(function(element) {
-            var elementDiv = socialDiv.querySelector(element);
-            if (elementDiv != null) {
-                elementDiv.style.display = 'none';
-            }
-       });
-       
-        return true;
-    }
-    webviewWrapper.loadMore = function() {
-       var button = document.getElementById('order-list-button');
-       if (button == null) return false;
-       button.click();
-       return true;
     }
     webviewWrapper.getOrders = function() {
         var useAdditionalTrack = true;
@@ -94,28 +55,7 @@
         if (priceDiv == null || priceDiv.innerHTML == '') {
             return null
         }
-       
-        return document.getElementsByTagName('html')[0].innerHTML;
-    }
-})();
 
-    }
-    webviewWrapper.checkInvalidLogin = function() {
-        return document.querySelector('.fm-login .comet-alert-error') != null;
-    }
-    webviewWrapper.checkIsOrderPage = function() {
-        var div = document.querySelector(".order-list");
-        if (div == null) {
-            return false;
-        }
-        return true;
-    }
-    webviewWrapper.getProductContent = function() {
-        var priceDiv = document.getElementById('root')
-        if (priceDiv == null || priceDiv.innerHTML == '') {
-            return null
-        }
-       
         return document.getElementsByTagName('html')[0].innerHTML;
     }
 })();
