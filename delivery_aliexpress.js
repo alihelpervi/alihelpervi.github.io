@@ -33,6 +33,8 @@
     webviewWrapper.loadMore = function() {
         var button = document.getElementById('order-list-button');
         if (button == null) return false;
+        var isDisabled = button.attributes['disabled'] != null;
+        if (isDisabled) return false;
         button.click();
         return true;
     }
