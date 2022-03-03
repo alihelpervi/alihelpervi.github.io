@@ -30,7 +30,7 @@
     }
 
     webviewWrapper.applyCurrencySettings = function(currencyCode) {  
-      document.getElementsByClassName(currencyCode)[0].click()
+      //document.getElementsByClassName(currencyCode)[0].click()
       return true
     }
 
