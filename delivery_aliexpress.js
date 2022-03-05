@@ -6,6 +6,7 @@
 
     var webviewWrapper = {};
     document.webviewWrapper = webviewWrapper;
+
     webviewWrapper.test = function() {
         return true;
     }
@@ -19,7 +20,7 @@
             return true;
         }
 
-        var allElements = ['.facebook', '.fm-sns-item.facebook'/*, '.fm-sns-item.google'*/, '.vk', '.fm-sns-item.vk', '.twitter', '.fm-sns-item.twitter', '.apple', '.fm-sns-item.apple', '.ok', '.fm-sns-item.ok', '.instagram', '.fm-sns-item.instagram', '.fm-sns-trigger', '.show-all', '.fm-forget'];
+        var allElements = ['.facebook', '.fm-sns-item.facebook'/*, '.fm-sns-item.google'*/, '.vk', '.fm-sns-item.vk', '.twitter', '.fm-sns-item.twitter', '.apple', '.fm-sns-item.apple', '.ok', '.fm-sns-item.ok', '.instagram', '.fm-sns-item.instagram', '.hide', '.show-all', '.fm-forget'];
 
         allElements.forEach(function(element) {
             var elementDiv = socialDiv.querySelector(element);
@@ -40,7 +41,7 @@
     }
     webviewWrapper.getOrders = function() {
         var useAdditionalTrack = true;
-        e=document.querySelector(".order-list");if(null==e)return null;var t=document.querySelector("div[placeholder]");if(null==t)return null;if(!t.classList.contains("amp-hidden"))return"loading";if(null!=e.getElementsByClassName("ms-ept-page")[0])return"empty";for(var l=[],r=[],a=e.getElementsByClassName("order-item"),i=0;i<a.length;i++){var n=a[i],s=n.getElementsByClassName("order-item-id")[0];if(null!=s){var m=s.textContent,d=m.split(":");if(2==d.length){var o=d[1].trim(),u=n.getElementsByClassName("order-action")[0];if(null!=u){var g=u.getElementsByTagName("a")[0];if(null!=g){var c=g.getAttribute("href");if(c.includes("logistics")){var f=n.getElementsByTagName("img")[0];if(null!=f||null!=(f=n.getElementsByTagName("amp-img")[0])){var p=f.getAttribute("src"),v=n.getElementsByClassName("order-product-title")[0];if(null!=v){var y=v.textContent,h=null;useAdditionalTrack&&(h="https://track.aliexpress.com/logisticsdetail.htm?tradeId="+o);var N={orderId:o,trackUrl:c,additionalTrackUrl:h,imageUrl:p,title:y};l.push(N)}}}}}}else r.push("fail to parse orderId: "+m)}else r.push("fail to find order-item-id")}var B={data:l,errors:r};return JSON.stringify(B);
+        e=document.querySelector(".order-wrap .order-header")?2:1,t=[],l=[];if(2==e){if(null==(u=document.querySelector(".order-content")))return null;t=[],l=[];for(var r=u.getElementsByClassName("order-item"),i=0;i<r.length;i++){if(null!=(f=(c=r[i]).getAttribute("href")))if(2==(h=(p=f).split("orderId=")).length){var a=h[1].trim();if(null!=(y=c.getElementsByClassName("order-item-btns")[0])){if(null==(v=y.getElementsByTagName("a")[0]))N="https://track.aliexpress.com/logisticsdetail.htm?tradeId="+a;else if(!(N=c.getAttribute("href")).includes("logistics"))continue;var s=(B=c.getElementsByClassName("order-item-content-img")[0]).getAttribute("style").match(/url\(["'](.*?)["']\)/);if(2==s.length){var n=s[1];if(null!=(E=c.getElementsByClassName("order-item-content-info-name")[0])){var o=E.textContent,d=null;useAdditionalTrack&&(d="https://track.aliexpress.com/logisticsdetail.htm?tradeId="+a);var m={orderId:a,trackUrl:N,additionalTrackUrl:d,imageUrl:n,title:o};t.push(m)}}else l.push("fail to parse url image: "+B.getAttribute("style"))}}else l.push("fail to parse orderId: "+p);else l.push("fail to find order-item-id")}}else{var u;if(null==(u=document.querySelector(".order-list")))return null;var g=document.querySelector("div[placeholder]");if(null==g)return null;if(!g.classList.contains("amp-hidden"))return"loading";if(null!=u.getElementsByClassName("ms-ept-page")[0])return"empty";for(r=u.getElementsByClassName("order-item"),i=0;i<r.length;i++){var c,f,p,h;if(null!=(f=(c=r[i]).getElementsByClassName("order-item-id")[0]))if(2==(h=(p=f.textContent).split(":")).length){var y,v,N,B;a=h[1].trim();if(null!=(y=c.getElementsByClassName("order-action")[0]))if(null!=(v=y.getElementsByTagName("a")[0]))if((N=v.getAttribute("href")).includes("logistics"))if(null!=(B=c.getElementsByTagName("img")[0])||null!=(B=c.getElementsByTagName("amp-img")[0])){var E;n=B.getAttribute("src");if(null!=(E=c.getElementsByClassName("order-product-title")[0])){o=E.textContent,d=null;useAdditionalTrack&&(d="https://track.aliexpress.com/logisticsdetail.htm?tradeId="+a);m={orderId:a,trackUrl:N,additionalTrackUrl:d,imageUrl:n,title:o};t.push(m)}}}else l.push("fail to parse orderId: "+p);else l.push("fail to find order-item-id")}}var C={_version:e,data:t,errors:l}; return JSON.stringify(C);
     }
     webviewWrapper.checkInvalidLogin = function() {
         return document.querySelector('.fm-login .comet-alert-error') != null;
