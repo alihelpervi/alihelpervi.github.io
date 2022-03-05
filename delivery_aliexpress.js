@@ -28,6 +28,10 @@
                 elementDiv.style.display = 'none';
             }
         });
+        
+        try {
+            document.getElementsByClassName('show-all')[0].click()
+        } catch (e) {}
 
         return true;
     }
