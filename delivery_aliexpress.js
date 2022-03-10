@@ -36,12 +36,15 @@
         return true;
     }
     webviewWrapper.loadMore = function() {
-        var button = document.getElementById('order-list-button');
-        if (button == null) return false;
-        var isEnabled = typeof button.attributes['disabled'] === 'undefined';
-        if (!isEnabled) return false;
-        button.click();
-        return true;
+        try {
+            var button = document.getElementsByClassName('order-more')[0].firstChild;
+            var isEnabled = typeof button.attributes['disabled'] === 'undefined';
+            if (!isEnabled) return false;
+            button.click();
+            
+            return true;
+        } catch (e) { }
+        return false;
     }
     webviewWrapper.getOrders = function() {
         var useAdditionalTrack = true;
