@@ -10,7 +10,7 @@
         return true;
     }
    webviewWrapper.processLoginPage = function() {
-        var socialDiv = document.querySelector('.c-login-footer')
+        var socialDiv = document.querySelector('.page__login-third-part')
         if (socialDiv == null) return false;
         socialDiv.style.display = 'none';
         return true;
