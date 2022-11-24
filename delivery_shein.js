@@ -9,7 +9,7 @@
     webviewWrapper.test = function() {
         return true;
     }
-   webviewWrapper.processLoginPage = function() {
+    webviewWrapper.processLoginPage = function() {
         var socialDiv = document.querySelector('.page__login-third-part')
         if (socialDiv == null) return false;
         socialDiv.style.display = 'none';
