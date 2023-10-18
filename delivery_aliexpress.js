@@ -20,7 +20,7 @@
             return true;
         }
 
-        var allElements = ['.facebook', '.fm-sns-item.facebook'/*, '.fm-sns-item.google'*/, '.vk', '.fm-sns-item.vk', '.twitter', '.fm-sns-item.twitter', '.apple', '.fm-sns-item.apple', '.ok', '.fm-sns-item.ok', '.instagram', '.fm-sns-item.instagram', '.hide', '.show-all', '.fm-forget'];
+        var allElements = ['.facebook', '.fm-sns-item.facebook', '.fm-sns-item.google', '.vk', '.fm-sns-item.vk', '.twitter', '.fm-sns-item.twitter', '.apple', '.fm-sns-item.apple', '.ok', '.fm-sns-item.ok', '.instagram', '.fm-sns-item.instagram', '.hide', '.show-all', '.fm-forget'];
 
         allElements.forEach(function(element) {
             var elementDiv = socialDiv.querySelector(element);
@@ -28,7 +28,7 @@
                 elementDiv.style.display = 'none';
             }
         });
-        
+
         try {
             document.getElementsByClassName('show-all')[0].click()
         } catch (e) {}
@@ -41,7 +41,7 @@
             var isEnabled = typeof button.attributes['disabled'] === 'undefined';
             if (!isEnabled) return false;
             button.click();
-            
+
             return true;
         } catch (e) { }
         return false;
