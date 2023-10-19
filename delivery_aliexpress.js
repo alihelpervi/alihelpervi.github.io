@@ -20,7 +20,7 @@
             return true;
         }
 
-        var allElements = ['.facebook', '.fm-sns-item.facebook', '.fm-sns-item.google', '.vk', '.fm-sns-item.vk', '.twitter', '.fm-sns-item.twitter', '.apple', '.fm-sns-item.apple', '.ok', '.fm-sns-item.ok', '.instagram', '.fm-sns-item.instagram', '.hide', '.show-all', '.fm-forget'];
+        var allElements = ['.facebook', '.fm-sns', '.fm-sns-item.facebook', '.fm-sns-item.google', '.vk', '.fm-sns-item.vk', '.twitter', '.fm-sns-item.twitter', '.apple', '.fm-sns-item.apple', '.ok', '.fm-sns-item.ok', '.instagram', '.fm-sns-item.instagram', '.hide', '.show-all', '.fm-forget'];
 
         allElements.forEach(function(element) {
             var elementDiv = socialDiv.querySelector(element);
