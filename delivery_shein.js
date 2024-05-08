@@ -26,4 +26,11 @@
         
         return errorDiv.style.display != 'none'
     }
+     webviewWrapper.checkIsOrderPage = function() {
+        var div = document.querySelector(".order-list-top-pad");
+        if (div == null) {
+            return false;
+        }
+        return true;
+    }
 })();
