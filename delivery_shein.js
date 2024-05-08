@@ -13,7 +13,7 @@
         var socialDiv = document.querySelector('.page__login-newUI-continue')
         if (socialDiv == null) return false;
         //socialDiv.style.display = 'none'; 
-        var allElements = ['.page__login-newUI-third', '.page__login_swithSiteTabNew', '.page__login-newUI-continueFooter'];
+        var allElements = ['.page__login-newUI-third', '.page__login_swithSiteTabNew', '.page__login-newUI-continueFooter', '.page__login-weekPrivacy'];
 
         allElements.forEach(function(element) {
             var elementDiv = socialDiv.querySelector(element);
