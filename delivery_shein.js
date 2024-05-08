@@ -13,6 +13,15 @@
         var socialDiv = document.querySelector('.page__login-newUI-continue')
         if (socialDiv == null) return false;
         //socialDiv.style.display = 'none'; 
+        var allElements = ['.page__login-newUI-third', '.page__login_swithSiteTabNew', '.page__login-newUI-continueFooter'];
+
+        allElements.forEach(function(element) {
+            var elementDiv = socialDiv.querySelector(element);
+            if (elementDiv != null) {
+                elementDiv.style.display = 'none';
+            }
+        });
+        
         return true;
     }
     webviewWrapper.getOrders = function() {
