@@ -10,7 +10,7 @@
         return true;
     }
     webviewWrapper.processLoginPage = function() {
-        var socialDiv = document.querySelector('.page__login-third-part')
+        var socialDiv = document.querySelector('.page__login-newUI-continue')
         if (socialDiv == null) return false;
         socialDiv.style.display = 'none';
         return true;
