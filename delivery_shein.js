@@ -63,7 +63,7 @@
             continue;
         }
         var orderId = orderIdArr[orderIdArr.length - 1].trim()
-        var trackUrl = domain + "/orders/trackTemp?billno=" + orderId;
+        var trackUrl = domain + "/api/orders/base/searchOrderGoods/query?_ver=1.1.8&_lang=en&limit=1&page=1&keyword=" + orderId;
         var imageUrlTag = orderItem.querySelector('.crop-image-container__img')
         var imageUrl = '';
         if (imageUrlTag == null) {
